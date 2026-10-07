@@ -113,3 +113,11 @@ Console.WriteLine($"Балл >= 4.0: {isHighScore}");
 Console.WriteLine($"Любимая буква: {favoriteLetter}");
 
 Console.ReadLine();
+
+
+Console.Write("Введите рост в метрах:");
+double height = double.Parse(Console.ReadLine());
+Console.Write("Введите вес в килограммах:");
+double weight = double.Parse(Console.ReadLine());
+double bmi = weight / (height * height);
+Console.WriteLine($"ИМТ: {bmi:F2}");
