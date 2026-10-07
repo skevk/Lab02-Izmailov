@@ -129,3 +129,28 @@ Console.Write("Введите имя: ");
 string name = Console.ReadLine();
 char fLetter = name[0];
 Console.WriteLine($"{surname} {fLetter}.");
+
+
+Console.Write("Введите целое число: ");
+string input1 = Console.ReadLine();
+bool success1 = int.TryParse(input1, out int intValue);
+if (success1)
+    Console.WriteLine($"int: преобразование успешно, значение = {intValue}");
+else
+    Console.WriteLine($"int: преобразование не удалось (введено: \"{input1}\")");
+Console.Write("Введите дробное число: ");
+string input2 = Console.ReadLine();
+bool success2 = double.TryParse(input2, out double doubleValue);
+if (success2)
+    Console.WriteLine($"double: преобразование успешно, значение = {doubleValue}");
+else
+    Console.WriteLine($"double: преобразование не удалось (введено: \"{input2}\")");
+Console.Write("Введите дату в формате дд.мм.гггг : ");
+string input3 = Console.ReadLine();
+bool success3 = DateTime.TryParse(input3, out DateTime dateValue);
+if (success3)
+    Console.WriteLine($"DateTime: преобразование успешно, значение = {dateValue:dd.MM.yyyy}");
+else
+    Console.WriteLine($"DateTime: преобразование не удалось (введено: \"{input3}\")");
+
+
